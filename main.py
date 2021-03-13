@@ -1,6 +1,6 @@
 import random
-import time
-from vividHues import Clr #my own module!
+import time          
+from vividHues import Clr #my own module for coloured strings!
 #====================
 def generate_path(size):
   """ create path and fill with "s" """
@@ -17,7 +17,7 @@ def hide_eggs(size,number_eggs):
   #print(path)
 #====================
 def find_eggs(size,hop):
-  bunny_pos = 0 #stars on 1st stone of path
+  bunny_pos = 0 #starts on 1st stone of path
   number = 0
   
   while (bunny_pos + hop) <= (size-1):
