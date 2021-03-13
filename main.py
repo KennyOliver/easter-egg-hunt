@@ -1,7 +1,7 @@
 import random
 import time
 #====================
-def fill_path(size):
+def generate_path(size):
   """ create a path and fill with "s" """
   for item in range(size):
     path.append("s")
@@ -15,14 +15,14 @@ def hide_eggs(size,number_eggs):
     path[egg_location] = "E"
   print(path)
 #====================
-def bunny_hops(size,hop):
+def find_eggs(size,hop):
   location = 0 #stars on 1st stone of path
   number = 0
   
   while (location + hop) <= (size-1):
     location += hop
     print("hop...", end = "")
-    time.sleep(1)
+    time.sleep(random.randint(1,3)/2)
   
     if path[location] == "E":
       number += 1
@@ -33,16 +33,16 @@ def bunny_hops(size,hop):
 # MAIN PROGRAM
 print("Welcome to the Easter Egg hunt")
 path = []
-path_size = 10
+path_size = 100
+number_eggs = 20
 
-fill_path(path_size)
+generate_path(path_size)
 
 # random.seed(10)
-number_eggs = 5
 hide_eggs(path_size,number_eggs)
 
-hop_size = random.randint(1,3)
+hop_size = random.randint(1,5)
 print(f"The Easter bunny\'s hop size is {hop_size}")
 print("How many eggs can your bunny find along the path?\n")
 
-bunny_hops(path_size,hop_size)
+find_eggs(path_size,hop_size)
