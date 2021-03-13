@@ -5,15 +5,15 @@ def generate_path(size):
   """ create a path and fill with "s" """
   for item in range(size):
     path.append("s")
-  print(path)
+  #print(path)
 #====================
 def hide_eggs(size,number_eggs):
   """ hide eggs at random locations along the path """
   for item in range(number_eggs):
     egg_location = random.randint(0,size-1)
-    print(egg_location)
+    #print(egg_location, end=",")
     path[egg_location] = "E"
-  print(path)
+  #print(path)
 #====================
 def find_eggs(size,hop):
   location = 0 #stars on 1st stone of path
