@@ -1,5 +1,6 @@
 import random
 import time
+from vividHues import Clr #my own module!
 #====================
 def generate_path(size):
   """ create path and fill with "s" """
@@ -41,7 +42,7 @@ random.seed(10)
 hide_eggs(path_size,number_eggs)
 
 print("<-- Easter Egg Hunt -->")
-print("Welcome to the annual Easter Egg hunt!")
+print(Clr.RED + "Welcome to the annual Easter Egg hunt!")
 print(f"Your Easter Bunny will look for {number_eggs} Easter Eggs hidden along a {path_size}m path")
 
 print("-" * 30)
