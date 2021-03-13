@@ -2,13 +2,13 @@ import random
 import time
 #====================
 def generate_path(size):
-  """ create a path and fill with "s" """
+  """ create path and fill with "s" """
   for item in range(size):
     path.append("s")
   #print(path)
 #====================
 def hide_eggs(size,number_eggs):
-  """ hide eggs at random locations along the path """
+  """ hide eggs at random locations on path """
   for item in range(number_eggs):
     egg_pos = random.randint(0,size-1)
     #print(egg_pos, end=",")
@@ -16,19 +16,18 @@ def hide_eggs(size,number_eggs):
   #print(path)
 #====================
 def find_eggs(size,hop):
-  location = 0 #stars on 1st stone of path
+  bunny_pos = 0 #stars on 1st stone of path
   number = 0
   
-  while (location + hop) <= (size-1):
-    location += hop
+  while (bunny_pos + hop) <= (size-1):
+    bunny_pos += hop
     print("hop...", end = "")
-    time.sleep(random.randint(1,3)/2)
+    time.sleep(random.randint(1,3)/8)
   
-    if path[location] == "E":
+    if path[bunny_pos] == "E":
       number += 1
-      print("\033[A" + ("\t") * 20 +"\033[A") #clear previous lines
       print("Egg found!")
-
+  
   print(f"\n{bunny_name} has found {number} egg(s)!")
 #====================
 # MAIN PROGRAM
@@ -38,20 +37,19 @@ number_eggs = 20
 
 generate_path(path_size)
 
-# random.seed(10)
+random.seed(10)
 hide_eggs(path_size,number_eggs)
 
 print("<-- Easter Egg Hunt -->")
 print("Welcome to the annual Easter Egg hunt!")
-print(f"Your Easter Bunny will look for {number_eggs} Easter Eggs along a {path_size}m path")
+print(f"Your Easter Bunny will look for {number_eggs} Easter Eggs hidden along a {path_size}m path")
+
 print("-" * 30)
 bunny_name = input("Enter a name for your Easter Bunny\n\t--> ")
 print("-" * 30)
 
 hop_size = random.randint(1,5)
-print(f"{bunny_name}\'s hop size is {hop_size}")
+print(f"{bunny_name} can hop {hop_size}m")
 print(f"How many eggs will {bunny_name} find along the path?\n")
 
 find_eggs(path_size,hop_size)
-
-# print("\033[A                             \033[A")
