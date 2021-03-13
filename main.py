@@ -31,9 +31,8 @@ def find_eggs(size,hop):
   print(f"\nThe Easter bunny has found {number} egg(s)")
 #====================
 # MAIN PROGRAM
-print("Welcome to the Easter Egg hunt")
 path = []
-path_size = 100
+path_size = 10
 number_eggs = 20
 
 generate_path(path_size)
@@ -41,8 +40,15 @@ generate_path(path_size)
 # random.seed(10)
 hide_eggs(path_size,number_eggs)
 
+print("<-- Easter Egg Hunt -->")
+print("Welcome to the annual Easter Egg hunt!")
+print(f"Your Easter Bunny will look for {number_eggs} Easter Eggs along a {path_size}m path")
+print("-" * 30)
+bunny_name = input("Enter a name for your Easter Bunny\n\t--> ")
+print("-" * 30)
+
 hop_size = random.randint(1,5)
-print(f"The Easter bunny\'s hop size is {hop_size}")
-print("How many eggs can your bunny find along the path?\n")
+print(f"{bunny_name}\'s hop size is {hop_size}")
+print(f"How many eggs will {bunny_name} find along the path?\n")
 
 find_eggs(path_size,hop_size)
