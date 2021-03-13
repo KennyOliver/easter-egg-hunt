@@ -10,9 +10,9 @@ def generate_path(size):
 def hide_eggs(size,number_eggs):
   """ hide eggs at random locations along the path """
   for item in range(number_eggs):
-    egg_location = random.randint(0,size-1)
-    #print(egg_location, end=",")
-    path[egg_location] = "E"
+    egg_pos = random.randint(0,size-1)
+    #print(egg_pos, end=",")
+    path[egg_pos] = "E"
   #print(path)
 #====================
 def find_eggs(size,hop):
@@ -26,13 +26,14 @@ def find_eggs(size,hop):
   
     if path[location] == "E":
       number += 1
-      print("\nFound a egg!")
+      print("\033[A" + ("\t") * 20 +"\033[A") #clear previous lines
+      print("Egg found!")
 
-  print(f"\nThe Easter bunny has found {number} egg(s)")
+  print(f"\n{bunny_name} has found {number} egg(s)!")
 #====================
 # MAIN PROGRAM
 path = []
-path_size = 10
+path_size = 50
 number_eggs = 20
 
 generate_path(path_size)
@@ -52,3 +53,5 @@ print(f"{bunny_name}\'s hop size is {hop_size}")
 print(f"How many eggs will {bunny_name} find along the path?\n")
 
 find_eggs(path_size,hop_size)
+
+# print("\033[A                             \033[A")
