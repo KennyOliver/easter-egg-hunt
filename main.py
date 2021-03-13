@@ -37,12 +37,12 @@ path_size = 10
 
 fill_path(path_size)
 
-random.seed(1)
+# random.seed(10)
 number_eggs = 5
-hide_eggs(path_size, number_eggs)
+hide_eggs(path_size,number_eggs)
 
 hop_size = random.randint(1,3)
 print(f"The Easter bunny\'s hop size is {hop_size}")
 print("How many eggs can your bunny find along the path?\n")
 
-bunny_hops(path_size, hop_size)
+bunny_hops(path_size,hop_size)
