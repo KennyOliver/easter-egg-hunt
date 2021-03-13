@@ -42,12 +42,12 @@ random.seed(10)
 hide_eggs(path_size,number_eggs)
 
 print("<-- Easter Egg Hunt -->")
-print(Clr.RED + "Welcome to the annual Easter Egg hunt!")
+print(Clr.GREEN + "Welcome to the annual Easter Egg hunt!" + Clr.RESET)
 print(f"Your Easter Bunny will look for {number_eggs} Easter Eggs hidden along a {path_size}m path")
 
-print("-" * 30)
-bunny_name = input("Enter a name for your Easter Bunny\n\t--> ")
-print("-" * 30)
+print(Clr.BLACK + "-" * 30 + Clr.RESET)
+bunny_name = input(Clr.CYAN + "Enter a name for your Easter Bunny\n\t--> " + Clr.RESET)
+print(Clr.BLACK + "-" * 30 + Clr.RESET)
 
 hop_size = random.randint(1,5)
 print(f"{bunny_name} can hop {hop_size}m")
