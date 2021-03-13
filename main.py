@@ -27,9 +27,9 @@ def find_eggs(size,hop):
   
     if path[bunny_pos] == "E":
       number += 1
-      print("Egg found!")
+      print(Clr.LIME + "Egg found!" + Clr.RESET)
   
-  print(f"\n{bunny_name} has found {number} egg(s)!")
+  print(Clr.GREEN + f"\n{bunny_name} has found {number} egg(s)!" + Clr.RESET)
 #====================
 # MAIN PROGRAM
 path = []
@@ -51,6 +51,6 @@ print(Clr.BLACK + "-" * 30 + Clr.RESET)
 
 hop_size = random.randint(1,5)
 print(Clr.YELLOW + f"{bunny_name} can hop {hop_size}m")
-print(Clr.PINK + f"How many eggs will {bunny_name} find along the path?\n")
+print(Clr.PINK + f"How many eggs will {bunny_name} find along the path?\n" + Clr.RESET)
 
 find_eggs(path_size,hop_size)
