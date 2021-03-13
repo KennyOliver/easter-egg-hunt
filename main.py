@@ -43,14 +43,14 @@ hide_eggs(path_size,number_eggs)
 
 print("<-- Easter Egg Hunt -->")
 print(Clr.GREEN + "Welcome to the annual Easter Egg hunt!" + Clr.RESET)
-print(f"Your Easter Bunny will look for {number_eggs} Easter Eggs hidden along a {path_size}m path")
+print(Clr.LIME + f"Your Easter Bunny will look for {number_eggs} Easter Eggs hidden along a {path_size}m path")
 
 print(Clr.BLACK + "-" * 30 + Clr.RESET)
-bunny_name = input(Clr.CYAN + "Enter a name for your Easter Bunny\n\t--> " + Clr.RESET)
+bunny_name = input(Clr.YELLOW + "Enter a name for your Easter Bunny\n\t--> " + Clr.RESET)
 print(Clr.BLACK + "-" * 30 + Clr.RESET)
 
 hop_size = random.randint(1,5)
-print(f"{bunny_name} can hop {hop_size}m")
-print(f"How many eggs will {bunny_name} find along the path?\n")
+print(Clr.YELLOW + f"{bunny_name} can hop {hop_size}m")
+print(Clr.PINK + f"How many eggs will {bunny_name} find along the path?\n")
 
 find_eggs(path_size,hop_size)
