@@ -32,11 +32,12 @@ def find_eggs(length,hop):
   print(Clr.GREEN + f"\n{bunny_name} has found {egg_count} egg(s)!" + Clr.RESET)
 #====================
 # MAIN PROGRAM
-path = []
-path_length = 50
-number_eggs = 20
 
 # random.seed(10)
+path = []
+path_length = random.choice([25,50,75])
+number_eggs = random.choice([10,15,20])
+
 generate_path(path_length)
 hide_eggs(path_length,number_eggs)
 hop_size = random.randint(1,5)
