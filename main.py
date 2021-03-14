@@ -1,6 +1,6 @@
 import random
 import time          
-from vividHues import Clr #my own module for coloured strings!
+from VividHues import Clr #my own module for coloured strings!
 #====================
 def generate_path(length):
   """ create path and fill with "s" """
