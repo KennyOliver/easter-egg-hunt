@@ -7,7 +7,11 @@
 
 [![repl](https://replit.com/badge/github/KennyOliver/easter-egg-hunt)](https://replit.com/@KennyOliver/easter-egg-hunt)
 
-Hide easter eggs for an Easter Bunny to find!
+Easter Eggs have been hidden, and your Easter Bunny will have to find them!
+
+This game uses VividHues - my own Python Package!
+
+[![VividHues](https://img.shields.io/badge/Get%20VividHues-252525?style=for-the-badge&logo=python&logoColor=white&link=https://github.com/KennyOliver/VividHues)](https://github.com/KennyOliver/VividHues)
 
 ---
 Kenny Oliver ©2021
