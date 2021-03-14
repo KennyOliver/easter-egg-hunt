@@ -22,7 +22,7 @@ def find_eggs(length,hop):
   
   while (bunny_pos + hop) <= (length-1):
     bunny_pos += hop
-    print("hop...", end = "")
+    print("hop...", end="")
     time.sleep(random.randint(1,3)/8)
   
     if path[bunny_pos] == "E":
