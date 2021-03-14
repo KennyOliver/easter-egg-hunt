@@ -38,7 +38,7 @@ number_eggs = 20
 
 generate_path(path_size)
 
-random.seed(10)
+# random.seed(10)
 hide_eggs(path_size,number_eggs)
 
 print("<-- Easter Egg Hunt -->")
