@@ -47,10 +47,10 @@ print(Clr.GREEN + "Welcome to the annual Easter Egg hunt!" + Clr.RESET)
 print(Clr.LIME + f"Your Easter Bunny will look for {number_eggs} Easter Eggs hidden along a {path_length}m path")
 
 print(Clr.BLACK + "-" * 30 + Clr.RESET)
-bunny_name = input(Clr.YELLOW + "Enter a name for your Easter Bunny\n\t--> " + Clr.RESET)
+bunny_name = input(Clr.YELLOW + "What will you call your Easter Bunny?\n\t--> " + Clr.RESET)
+print(Clr.YELLOW + f"{bunny_name} can hop {hop_size}m!")
 print(Clr.BLACK + "-" * 30 + Clr.RESET)
 
-print(Clr.YELLOW + f"{bunny_name} can hop {hop_size}m")
-print(Clr.PINK + f"How many eggs will {bunny_name} find along the path?\n" + Clr.RESET)
+print(Clr.PINK + f"How many eggs will {bunny_name} find along the path?" + Clr.RESET)
 
 find_eggs(path_length,hop_size)
